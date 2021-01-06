@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.control.ServerWindowController">
+    <Label alignment="CENTER" layoutX="164.0" layoutY="70.0" prefHeight="50.0" prefWidth="400.0" text="SERVER LOG"
+           textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <font>
+            <Font name="Ayuthaya" size="20.0"/>
+        </font>
+    </Label>
+    <Separator prefWidth="200.0"/>
+
+    <ScrollPane fx:id="scrollPane" disable="true" prefHeight="450.0" prefWidth="400.0" AnchorPane.topAnchor="50.0">
+        <TextArea fx:id="textArea" editable="false" prefHeight="450.0" prefWidth="400.0">
+            <font>
+                <Font name="Ayuthaya"/>
+            </font>
+        </TextArea>
+
+    </ScrollPane>
+    <Button fx:id="btnStart" mnemonicParsing="false" onAction="#startServer" text="Start Server"
+            AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="240.0"/>
+</AnchorPane>

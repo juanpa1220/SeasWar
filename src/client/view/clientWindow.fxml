@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #6e82a5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.control.ClientWindowController">
+    <AnchorPane fx:id="anchorBoardPane" layoutX="8.0" layoutY="7.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+    <HBox layoutY="400.0" prefHeight="20.0" prefWidth="600.0" style="-fx-background-color: #728f6b; -fx-border-color: black;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="1" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="2" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="3" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="4" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="5" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="6" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="7" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="8" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="9" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="10" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="11" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="12" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="13" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="14" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="15" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="16" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="17" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="18" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="19" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="20" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="21" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="22" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="23" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="24" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="25" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="26" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="27" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="28" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="29" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="30" />
+    </HBox>
+    <VBox layoutX="600.0" layoutY="6.0" prefHeight="400.0" prefWidth="20.0" style="-fx-background-color: #728f6b; -fx-border-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="20.0">
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="1" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="2" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="3" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="4" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="5" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="6" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="7" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="8" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="9" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="10" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="11" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="12" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="13" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="14" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="15" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="16" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="17" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="18" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="19" />
+        <Label alignment="CENTER" prefHeight="20.0" prefWidth="20.0" style="-fx-font-size: 11" text="20" />
+
+    </VBox>
+    <VBox layoutX="620.0" layoutY="3.0" prefHeight="420.0" prefWidth="580.0" AnchorPane.leftAnchor="630.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+        <Label alignment="CENTER" prefWidth="580.0" text="Bitácora">
+            <font>
+                <Font name="Ayuthaya" size="13.0" />
+            </font>
+        </Label>
+        <ScrollPane prefHeight="200.0" prefWidth="580.0">
+            <TextArea editable="false" prefHeight="200.0" prefWidth="580.0">
+                <font>
+                    <Font name="Ayuthaya" size="12.0" />
+                </font>
+            </TextArea>
+        </ScrollPane>
+        <Label alignment="CENTER" prefWidth="580.0" text="Resultado de Ataque">
+            <font>
+                <Font name="Ayuthaya" size="13.0" />
+            </font>
+        </Label>
+        <ScrollPane prefHeight="200.0" prefWidth="580.0">
+            <TextArea editable="false" prefHeight="200.0" prefWidth="580.0">
+                <font>
+                    <Font name="Ayuthaya" size="12.0" />
+                </font>
+            </TextArea>
+        </ScrollPane>
+    </VBox>
+    <TextField fx:id="commandInput" layoutX="20.0" layoutY="766.0" onKeyPressed="#onKeyPressed" prefHeight="27.0" prefWidth="493.0" promptText="&gt;&gt;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="766.0">
+        <font>
+            <Font name="Ayuthaya" size="12.0" />
+        </font>
+    </TextField>
+    <ScrollPane layoutX="20.0" layoutY="436.0" prefHeight="320.0" prefWidth="580.0" AnchorPane.topAnchor="437.0">
+        <TextFlow fx:id="commandOutput" prefHeight="320.0" prefWidth="580.0">
+            <style>-fx-font-family: Ayuthaya</style>
+        </TextFlow>
+    </ScrollPane>
+    <ScrollPane layoutX="620.0" layoutY="437.0" prefHeight="355.0" prefWidth="280.0" AnchorPane.topAnchor="437.0">
+        <Label fx:id="lblTurn" text="Turno: ">
+            <font>
+                <Font name="Ayuthaya" size="13.0" />
+            </font>
+        </Label>
+    </ScrollPane>
+    <Label layoutX="743.0" layoutY="420.0" text="Detalle">
+        <font>
+            <Font name="Ayuthaya" size="13.0" />
+        </font>
+    </Label>
+    <ScrollPane layoutX="910.0" layoutY="437.0" prefHeight="355.0" prefWidth="280.0" AnchorPane.topAnchor="437.0">
+        <TilePane fx:id="warriorsPane" prefHeight="355.0" prefWidth="280.0" />
+    </ScrollPane>
+    <Label layoutX="1011.0" layoutY="420.0" text="Luchadores">
+        <font>
+            <Font name="Ayuthaya" size="13.0" />
+        </font>
+    </Label>
+    <Button layoutX="521.0" layoutY="766.0" mnemonicParsing="false" onAction="#onEnterAction" prefHeight="27.0" prefWidth="78.0" text="Enter" AnchorPane.topAnchor="766.0">
+        <font>
+            <Font name="Ayuthaya" size="13.0" />
+        </font>
+    </Button>
+</AnchorPane>
