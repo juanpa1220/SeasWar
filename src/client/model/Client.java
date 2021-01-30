@@ -23,22 +23,23 @@ public class Client {
             this.clientThread = new ClientThread(socketRef, refClientWindow);
             this.clientThread.start();
 
-//            String name = JOptionPane.showInputDialog("Introduzca un Nick:");
             this.clientThread.writer.writeInt(1); //instruccion para el switch del thraed servidor
             this.clientThread.writer.writeUTF(this.name); //instruccion para el switch del thraed servidor
-//            this.refClientWindow.setTitle(name);
-
             return true;
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return false;
         }
-
     }
 
     public void setName(String name) {
         this.name = name;
         ClientMain.primaryStage.setTitle(name);
+    }
+
+    public String getName() {
+        return name;
     }
 
 }
