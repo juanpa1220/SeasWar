@@ -233,6 +233,24 @@ public class ServerThread extends Thread {
                         }
                         break;
 
+                    case 16: // send nums
+                        String numsTo = reader.readUTF();
+                        int num1 = reader.readInt();
+                        int num2 = reader.readInt();
+                        int num3 = reader.readInt();
+                        AtomicBoolean flag7 = new AtomicBoolean(true);
+                        for (ServerThread serverThread : this.server.connections) {
+                            if (serverThread.name.equals(numsTo) && serverThread.id != this.id && flag7.get()) {
+                                serverThread.writer.writeInt(17);
+                                serverThread.writer.writeInt(num1);
+                                serverThread.writer.writeInt(num2);
+                                serverThread.writer.writeInt(num3);
+                                flag7.set(false);
+                            }
+                        }
+                        break;
+
+
                 }
             } catch (IOException ex) {
                 this.running = false;

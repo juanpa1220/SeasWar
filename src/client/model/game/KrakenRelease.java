@@ -113,7 +113,7 @@ public class KrakenRelease extends Warrior {
                     super.failAttack("Su ataque Kraken Release ha fallado, el oponente tenía un escudo",
                             this.refWindowController.refClient.clientThread.getCurrentTurn() +
                                     " se ha defendido exitosamente del ataque Kraken Release de" + this.refWindowController.refClient.getName(),
-                            "se ha activado el escudo del Kraken Control");
+                            " se ha activado el escudo del Kraken Control");
                     this.refWindowController.setKrakenControl(false);
                     this.refWindowController.writeSuccess("Su escudo de Kraken Control ha sido usado exitosamente " +
                             "y se le devuelto el ataque al enemigo " + opponent);

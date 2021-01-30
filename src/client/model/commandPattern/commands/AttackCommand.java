@@ -6,6 +6,7 @@ import javafx.scene.text.TextFlow;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class AttackCommand extends BaseCommand {
@@ -56,12 +57,49 @@ public class AttackCommand extends BaseCommand {
                 for (String key : warrior.getAttacks().keySet()) {
                     if (key.equals(attack.toLowerCase())) {
                         if (key.equals("control the kraken")) {
-                            this.refWindowController.setKrakenControl(true);
-                            this.refWindowController.writeSuccess("Se ha activado un escudo para controlar el Kraken");
-                            try {
-                                this.refWindowController.refClient.clientThread.writer.writeInt(9);
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                            if (this.refWindowController.refClient.clientThread.getCurrentTurnId() == this.refWindowController.refClient.clientThread.getThreadId()) {
+                                this.refWindowController.setKrakenControl(true);
+                                this.refWindowController.writeSuccess("Se ha activado un escudo para controlar el Kraken");
+                                try {
+                                    this.refWindowController.refClient.clientThread.writer.writeInt(9);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            } else {
+                                this.refWindowController.writeError("No es su turno de jugar");
+                            }
+                        } else if (key.equals("three numbers")) {
+                            if (this.refWindowController.refClient.clientThread.getCurrentTurnId() == this.refWindowController.refClient.clientThread.getThreadId()) {
+                                if (args.length > 3) {
+                                    this.refWindowController.writeError("Argumentos no identificados");
+                                } else {
+                                    AtomicInteger num1 = new AtomicInteger(-1);
+                                    AtomicInteger num2 = new AtomicInteger(-1);
+                                    AtomicInteger num3 = new AtomicInteger(-1);
+                                    try {
+                                        num1.set(Integer.parseInt(args[0]));
+                                        num2.set(Integer.parseInt(args[1]));
+                                        num3.set(Integer.parseInt(args[2]));
+                                        if (num1.get() > -1 && num2.get() > -1 && num3.get() > -1) {
+                                            this.refWindowController.writeSuccess("Su contricante está indicando los números, por favor espere...");
+                                            refWindowController.refClient.clientThread.writer.writeInt(3);
+                                            refWindowController.refClient.clientThread.writer.writeUTF(name);
+                                            refWindowController.refClient.clientThread.writer.writeUTF(
+                                                    "Está recibiendo el ataque Three Numbers del luchador Poseidon Trident," +
+                                                            "por favor indique tres números con el comando num");
+
+                                            refWindowController.refClient.clientThread.writer.writeInt(16);
+                                            refWindowController.refClient.clientThread.writer.writeUTF(name);
+                                            refWindowController.refClient.clientThread.writer.writeInt(num1.get());
+                                            refWindowController.refClient.clientThread.writer.writeInt(num2.get());
+                                            refWindowController.refClient.clientThread.writer.writeInt(num3.get());
+                                        }
+                                    } catch (Exception exception) {
+                                        this.refWindowController.writeError("Debe ingresar tres numeros como argumento");
+                                    }
+                                }
+                            } else {
+                                this.refWindowController.writeError("No es su turno de jugar");
                             }
                         } else {
                             try {

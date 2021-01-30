@@ -142,6 +142,14 @@ public class ClientThread extends Thread {
                     case 16:
                         this.refClientWindow.increaseFailAttacks();
                         break;
+                    case 17:
+                        int num1 = reader.readInt();
+                        int num2 = reader.readInt();
+                        int num3 = reader.readInt();
+                        this.refClientWindow.threeNumbers.add(num1);
+                        this.refClientWindow.threeNumbers.add(num2);
+                        this.refClientWindow.threeNumbers.add(num3);
+                        break;
                 }
             } catch (IOException ex) {
                 System.out.println("El server se ha desconectado.");
@@ -166,52 +174,6 @@ public class ClientThread extends Thread {
                 } catch (Exception ignored) {
                 }
             }
-
-//            switch (warriorType) {
-//                case FISH_TELEPATHY:
-//                    for (Warrior enemy : this.refClientWindow.getEnemies()) {
-//                        if (enemy.TYPE == WarriorType.FISH_TELEPATHY) {
-//                            enemy.getAttacks().get(attack).accept(args2); // execute the attack and send the args by parameter
-//                        }
-//                    }
-//                    break;
-//                case KRAKEN_RELEASE:
-//                    for (Warrior enemy : this.refClientWindow.getEnemies()) {
-//                        if (enemy.TYPE == WarriorType.KRAKEN_RELEASE) {
-//                            enemy.getAttacks().get(attack).accept(args2); // execute the attack and send the args by parameter
-//                        }
-//                    }
-//                    break;
-//                case POSEIDON_TRIDENT:
-//                    for (Warrior enemy : this.refClientWindow.getEnemies()) {
-//                        if (enemy.TYPE == WarriorType.POSEIDON_TRIDENT) {
-//                            enemy.getAttacks().get(attack).accept(args2); // execute the attack and send the args by parameter
-//                        }
-//                    }
-//                    break;
-//                case SEA_THUNDERS:
-//                    for (Warrior enemy : this.refClientWindow.getEnemies()) {
-//                        if (enemy.TYPE == WarriorType.SEA_THUNDERS) {
-//                            enemy.getAttacks().get(attack).accept(args2); // execute the attack and send the args by parameter
-//                        }
-//                    }
-//                    break;
-//                case UNDERSEA_FIRE:
-//                    for (Warrior enemy : this.refClientWindow.getEnemies()) {
-//                        if (enemy.TYPE == WarriorType.UNDERSEA_FIRE) {
-//                            enemy.getAttacks().get(attack).accept(args2); // execute the attack and send the args by parameter
-//                        }
-//                    }
-//                    break;
-//                case WAVE_CONTROL:
-//                    for (Warrior enemy : this.refClientWindow.getEnemies()) {
-//                        if (enemy.TYPE == WarriorType.WAVE_CONTROL) {
-//                            enemy.getAttacks().get(attack).accept(args2); // execute the attack and send the args by parameter
-//                        }
-//                    }
-//                    break;
-//            }
-//            this.refClientWindow.setEnemyPower(0);
         }
     }
 

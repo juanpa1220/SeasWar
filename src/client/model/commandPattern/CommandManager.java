@@ -28,6 +28,7 @@ public class CommandManager {
             this.registerCommand(ConsultCommand.COMMAND_NAME, ConsultCommand.class);
             this.registerCommand(PowerCommand.COMMAND_NAME, PowerCommand.class);
             this.registerCommand(LogCommand.COMMAND_NAME, LogCommand.class);
+            this.registerCommand(NumCommand.COMMAND_NAME, NumCommand.class);
         }
     }
 

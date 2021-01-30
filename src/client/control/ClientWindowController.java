@@ -41,6 +41,7 @@ public class ClientWindowController implements Serializable {
     private boolean hasConnected = false;
     private final ArrayList<Warrior> warriors = new ArrayList<>();
     private final ArrayList<Warrior> enemies = new ArrayList<>();
+    public ArrayList<Integer> threeNumbers = new ArrayList<>();
     private final CommandManager commandManager;
     private boolean unavailableFlag;
     private boolean percentageFlag;
@@ -80,14 +81,14 @@ public class ClientWindowController implements Serializable {
         this.commandManager.setLeftCommands(level);
 
 //         just for test
-        if (level == 1) {
-            this.commandInput.setText("luchador -n \"nombre\" -p 20 -t \"kraken release\" -f 100 -r 75 -s 50 -i \"../imgs/crush.png\"");
-            this.onEnterAction();
-            this.commandInput.setText("luchador -n \"nombre1\" -p 20 -t \"poseidon trident\" -f 50 -r 100 -s 75 -i \"../imgs/crush.png\"");
-            this.onEnterAction();
-            this.commandInput.setText("luchador -n \"nombre2\" -p 60 -t \"wave control\" -f 75 -r 50 -s 100 -i \"../imgs/crush.png\"");
-            this.onEnterAction();
-        }
+//        if (level == 1) {
+//            this.commandInput.setText("luchador -n \"nombre\" -p 20 -t \"kraken release\" -f 100 -r 75 -s 50 -i \"../imgs/crush.png\"");
+//            this.onEnterAction();
+//            this.commandInput.setText("luchador -n \"nombre1\" -p 20 -t \"poseidon trident\" -f 50 -r 100 -s 75 -i \"../imgs/crush.png\"");
+//            this.onEnterAction();
+//            this.commandInput.setText("luchador -n \"nombre2\" -p 60 -t \"wave control\" -f 75 -r 50 -s 100 -i \"../imgs/crush.png\"");
+//            this.onEnterAction();
+//        }
     }
 
     public void removeLevelTwoCommands() {
